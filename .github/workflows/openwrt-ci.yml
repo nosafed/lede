@@ -5,7 +5,7 @@
 #
 # Copyright (C) 2020 KFERMercer
 #
-name: OpenWrt-CI
+name: OpenWrt-自动编译
 on:
   workflow_dispatch:
     inputs:
@@ -54,19 +54,19 @@ jobs:
       - name: 拉取第三方插件
         run: |
           git clone https://github.com/jerrykuku/luci-app-vssr package/luci-app-vssr
-          git clone -b master https://github.com/vernesong/OpenClash.git package/diy/luci-app-openclash  #openclash出国软件
+          git clone https://github.com/vernesong/OpenClash.git package/diy/luci-app-openclash  #openclash出国软件
           git clone https://github.com/frainzy1477/luci-app-clash.git package/diy/luci-app-clash  #clash出国软件
           git clone https://github.com/silime/luci-app-kodexplorer.git package/diy/luci-app-kodexplorer #可道云插件
 
-      - name: Generate configuration file
+      - name: 生成配置文件
         run: make defconfig
 
-      - name: Make download
+      - name: 进行下载
         run: |
           make download -j8
           find dl -size -1024c -exec rm -f {} \;
 
-      - name: Compile firmware
+      - name: 编译固件
         run: |
           make -j$(nproc) || make -j1 V=s
           echo "======================="
@@ -78,7 +78,7 @@ jobs:
           du -h --max-depth=1 ./build_dir
           du -h --max-depth=1 ./bin
 
-      - name: Prepare artifact
+      - name: 准备插件
         run: |
           mkdir -p ./artifact/firmware
           mkdir -p ./artifact/package
@@ -88,7 +88,7 @@ jobs:
           cp -rf $(find ./bin/packages/ -type f -name "*.ipk") ./artifact/package/
           cp -rf $(find ./bin/targets/ -type f -name "*.buildinfo" -o -name "*.manifest") ./artifact/buildinfo/
 
-      - name: Deliver buildinfo
+      - name: 上传固信息
         uses: actions/upload-artifact@v2
         with:
           name: OpenWrt_buildinfo
