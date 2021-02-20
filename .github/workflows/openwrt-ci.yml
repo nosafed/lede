@@ -53,9 +53,8 @@ jobs:
           ./scripts/feeds install -a
       - name: 拉取第三方插件
         run: |
-          git clone https://github.com/jerrykuku/luci-app-vssr package/luci-app-vssr
+          git clone https://github.com/frainzy1477/luci-app-clash.git package/luci-app-clash #clash出国软件
           git clone https://github.com/vernesong/OpenClash.git package/diy/luci-app-openclash  #openclash出国软件
-          git clone https://github.com/frainzy1477/luci-app-clash.git package/diy/luci-app-clash  #clash出国软件
           git clone https://github.com/silime/luci-app-kodexplorer.git package/diy/luci-app-kodexplorer #可道云插件
 
       - name: 生成配置文件
