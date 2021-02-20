@@ -18,7 +18,7 @@ jobs:
 
   build_openwrt:
 
-    name: Build OpenWrt firmware
+    name: 编译 X86 OpenWrt固件
 
     runs-on: ubuntu-latest
 
