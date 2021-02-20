@@ -16,8 +16,9 @@ config global
 	option chnroute_url 'https://ispip.clang.cn/all_cn.txt'
 	option nfip_url 'https://cdn.jsdelivr.net/gh/QiuSimons/Netflix_IP/NF_only.txt'
 	option adblock_url 'https://anti-ad.net/anti-ad-for-dnsmasq.conf'
-	option global_server 'cfg0d4a8f'
 	option adblock '1'
+	option udp_relay_server 'same'
+	option global_server 'nil'
 
 config server_subscribe
 	option proxy '0'
@@ -222,24 +223,6 @@ config servers
 	option protocol 'auth_aes128_md5'
 	option local_port '1234'
 	option kcp_param '--nocomp'
-	option server_port '221'
-	option grouphashkey '7d4a45a73422b5a9fdd22cd21cba1fe8'
-	option password 'http://cc.ax/'
-	option hashkey '1f0ac5899747a16078c81bd0949bdfe2'
-	option encrypt_method 'aes-256-cfb'
-	option obfs_param 'data.bilibili.com/fe5c2100350'
-	option obfs 'plain'
-	option protocol_param '100350:541PIH'
-	option alias '[几鸡-学习助理] H+.HK⇠IPLC⇠广州.RI71128'
-	option server 'SCDN.71128.JERTDS.China-nCDN-nRDS.com'
-	option switch_enable '1'
-	option ip '124.71.35.15'
-
-config servers
-	option type 'ssr'
-	option protocol 'auth_aes128_md5'
-	option local_port '1234'
-	option kcp_param '--nocomp'
 	option server_port '37227'
 	option grouphashkey '7d4a45a73422b5a9fdd22cd21cba1fe8'
 	option password 'http://cc.ax/'
@@ -251,6 +234,7 @@ config servers
 	option alias '[几鸡-学习助理] H+.HK⇠隧洞⇠广州.RC37227'
 	option server 'SCDN.37227.KYEPLF.China-nCDN-nRDS.com'
 	option switch_enable '1'
+	option ip '183.232.228.113'
 
 config servers
 	option type 'ssr'
@@ -301,23 +285,6 @@ config servers
 	option protocol_param '100350:541PIH'
 	option alias '[几鸡-学习助理] H+.SG⇠IPLC⇠上海.RI72228'
 	option server 'SCDN.72228.GRURDS.China-nCDN-nRDS.com'
-	option switch_enable '1'
-
-config servers
-	option type 'ssr'
-	option protocol 'auth_aes128_md5'
-	option local_port '1234'
-	option kcp_param '--nocomp'
-	option server_port '221'
-	option grouphashkey '7d4a45a73422b5a9fdd22cd21cba1fe8'
-	option password 'http://cc.ax/'
-	option hashkey '62f8f12aaf6b85c739e444e3f45a3b5c'
-	option encrypt_method 'aes-256-cfb'
-	option obfs_param 'data.bilibili.com/fe5c2100350'
-	option obfs 'plain'
-	option protocol_param '100350:541PIH'
-	option alias '[几鸡-学习助理] H+.SG⇠IPLC⇠广州.RI71228'
-	option server 'SCDN.71228.JERCQJ.China-nCDN-nRDS.com'
 	option switch_enable '1'
 
 config servers
@@ -506,6 +473,7 @@ config servers
 	option alias '[几鸡-学习助理] I+.SG⇠隧道⇠广州.RC38127'
 	option server 'SCDN.38127.SAVBCY.China-nCDN-nRDS.com'
 	option switch_enable '1'
+	option ip '120.240.95.208'
 
 config servers
 	option type 'ssr'
@@ -540,6 +508,7 @@ config servers
 	option alias '[几鸡-学习助理] I.HK.⇠特优⇠华南.BGP:RC34228'
 	option server 'SCDN.34228.CMGZGF.China-nCDN-nRDS.com'
 	option switch_enable '1'
+	option ip '183.232.228.113'
 
 config servers
 	option type 'ssr'
@@ -621,4 +590,38 @@ config servers
 	option mux '0'
 	option switch_enable '1'
 	option local_port '1234'
+
+config servers
+	option type 'ssr'
+	option protocol 'auth_aes128_md5'
+	option local_port '1234'
+	option kcp_param '--nocomp'
+	option server_port '17227'
+	option grouphashkey '7d4a45a73422b5a9fdd22cd21cba1fe8'
+	option password 'http://cc.ax/'
+	option hashkey '0a0eed07af4796c81bc811849ca04e60'
+	option encrypt_method 'aes-256-cfb'
+	option obfs_param 'data.bilibili.com/fe5c2100350'
+	option obfs 'plain'
+	option protocol_param '100350:541PIH'
+	option alias '[几鸡-学习助理] H+.HK.CN2GIA⇠专线⇠华北.BGP:RC17227'
+	option server 'SCDN.17227.ZVQEYJ.China-nCDN-nRDS.com'
+	option switch_enable '1'
+
+config servers
+	option type 'ssr'
+	option protocol 'auth_aes128_md5'
+	option local_port '1234'
+	option kcp_param '--nocomp'
+	option server_port '17228'
+	option grouphashkey '7d4a45a73422b5a9fdd22cd21cba1fe8'
+	option password 'http://cc.ax/'
+	option hashkey '2a9465f2c0ed32eaf8a81133148ebebf'
+	option encrypt_method 'aes-256-cfb'
+	option obfs_param 'data.bilibili.com/fe5c2100350'
+	option obfs 'plain'
+	option protocol_param '100350:541PIH'
+	option alias '[几鸡-学习助理] H+.HK.CN2GIA⇠专线⇠华北.BGP:RC17228'
+	option server 'SCDN.17228.ZBQE5J.China-nCDN-nRDS.com'
+	option switch_enable '1'
 

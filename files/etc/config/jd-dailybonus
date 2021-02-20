@@ -12,5 +12,5 @@ config global
 	option auto_run_time_h '1'
 	option out '0'
 	option cookie 'pt_key=AAJgFCCcAEBkLP7Mh6WlfjO9dI5CQAej5OqwCvyo6zWFhn5I9xmp1rsKqNg_ztJS1Ic6H6ZagzlgvlNWkLC-hhbTniI1kIzW;pt_pin=134484110-92747130;'
-	option version '1.92'
+	option version '1.93'
 
