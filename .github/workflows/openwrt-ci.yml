@@ -45,7 +45,7 @@ jobs:
 
           df -h
 
-      - name: Update feeds
+      - name: 更新源
         run: |
           sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
           ./scripts/feeds update -a
@@ -98,20 +98,20 @@ jobs:
           name: OpenWrt_buildinfo
           path: ./artifact/buildinfo/
 
-      - name: Deliver package
+      - name: 打包插件
         uses: actions/upload-artifact@v2
         with:
           name: OpenWrt_package
           path: ./artifact/package/
 
-      - name: Deliver firmware
+      - name: 打包固件
         uses: actions/upload-artifact@v2
         with:
           name: OpenWrt_firmware
           path: ./bin/targets/
   
 
-      - name: Upload release asset
+      - name: 上传发布
         if: github.event == 'release'
         uses: svenstaro/upload-release-action@v2
         with:
