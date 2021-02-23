@@ -44,6 +44,14 @@ jobs:
           sudo -E apt-get clean
 
           df -h
+          
+      - name: 添加第三方插件及主题
+        run: |
+          git clone https://github.com/frainzy1477/luci-app-clash.git package/luci-app-clash
+          git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+          git clone https://github.com/silime/luci-app-kodexplorer.git package/luci-app-kodexplorer
+          git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git package/luci-theme-infinityfreedom
+          git clone https://github.com/rosywrt/luci-theme-rosy.git package/luci-theme-rosy
 
       - name: 更新源
         run: |
