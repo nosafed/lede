@@ -8,11 +8,4 @@ src-git freifunk https://github.com/freifunk/openwrt-packages.git
 #src-git management https://github.com/openwrt-management/packages.git
 #src-git oldpackages http://git.openwrt.org/packages.git
 #src-link custom /usr/src/openwrt/custom-feed
-#科学上网插件
 src-git helloworld https://github.com/fw876/helloworld
-src-git clash https://github.com/frainzy1477/luci-app-clash.git
-src-git openclash https://github.com/vernesong/OpenClash.git
-src-git kodexplorer https://github.com/silime/luci-app-kodexplorer.git
-# 第三方主题 
-src-git infinityfreedom https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git
-src-git rosy https://github.com/rosywrt/luci-theme-rosy.git
