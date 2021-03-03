@@ -18,7 +18,7 @@ jobs:
 
   build_openwrt:
 
-    name: 编译 Mi R3G OpenWrt固件
+    name: 编译R3G OpenWrt固件
 
     runs-on: ubuntu-latest
 
