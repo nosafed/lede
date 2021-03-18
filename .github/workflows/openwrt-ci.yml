@@ -47,8 +47,8 @@ jobs:
           
       - name: 添加第三方插件及主题
         run: |
-          git clone https://github.com/lisaac/luci-app-diskman.git package/luci-app-diskman
-          git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
+          #git clone https://github.com/lisaac/luci-app-diskman.git package/luci-app-diskman
+          #git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
           git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb 
           git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
           git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
@@ -58,7 +58,7 @@ jobs:
 
       - name: 更新源
         run: |
-          sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
+          # sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
           ./scripts/feeds update -a
           ./scripts/feeds install -a
           
